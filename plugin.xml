@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.wuips.alarm"
+    version="0.0.1">
+
+    <name>AlarmPlugin</name>
+
+	<js-module src="www/AlarmPlugin.js" name="AlarmPlugin">
+        <clobbers target="AlarmPlugin" />
+	</js-module>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+	<!-- android -->
+	<platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AlarmPlugin" >
+                <param name="android-package" value="com.wuips.essai.AlarmPlugin"/>
+            </feature>
+        </config-file>
+
+		<source-file src="src/android/com/plugin/essai/AlarmPlugin.java" target-dir="src/com/wuips/alarm" />
+		<source-file src="src/android/com/plugin/android-support-v13.jar" target-dir="libs/" />
+
+	</platform>
+
+</plugin>
