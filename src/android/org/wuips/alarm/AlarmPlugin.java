@@ -1,4 +1,4 @@
-package com.wuips.alarm;
+package org.wuips.alarm;
 
 import java.util.Iterator;
 
